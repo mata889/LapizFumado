@@ -22,6 +22,7 @@ import {
     FormGroup,
 } from "reactstrap";
 
+
 export default class Cabeza extends React.Component {
     constructor(props) {
         super(props);
@@ -45,7 +46,7 @@ export default class Cabeza extends React.Component {
                         PenAmazon</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
+                        <Nav className="ml-auto " navbar>
                             <NavItem>
                                 <NavLink href="/Home">Home</NavLink>
                             </NavItem>
@@ -56,14 +57,11 @@ export default class Cabeza extends React.Component {
                                 <NavLink href="/Carrito">Carrito</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/Quienes">QuienesSomos?</NavLink>
-                            </NavItem>
-                            <NavItem>
                                 <NavLink href="https://www.instagram.com/matamorosss/">NuestroCreador</NavLink>
                             </NavItem>
 
                             <NavItem>
-                                <NavLink href="https://github.com/mata889/MashedTomato">MiGitHub</NavLink>
+                                <NavLink href="https://github.com/mata889/LapizFumado">MiGitHub</NavLink>
                             </NavItem>
 
 

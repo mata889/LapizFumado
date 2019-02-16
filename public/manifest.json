@@ -1,14 +1,24 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "PenAmazon",
+  "name": "Venta de Lapices de Alta Gama",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "./src/logo100x100.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
+      "src": "./src/logo114x111.png",
+      "type": "image/png",
+      "sizes": "114x111"
+    },
+    {
+      "src": "./src/logo500x500.png",
+      "type": "image/png",
+      "sizes": "500x500"
     }
   ],
-  "start_url": ".",
+  "start_url": "index.html?launcher=true",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
