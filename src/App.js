@@ -7,26 +7,19 @@ import Home from "./Paginas/Home";
 import Productos from "./Paginas/Productos";
 
 
-
 class App extends Component {
   render() {
     return (
-
       <div id="cabeza">
-
         <BrowserRouter>
           <div>
             <Cabeza />
-
             <Switch>
               <Route path="/Home" component={Home} exact />
               <Route path="/Productos" component={Productos} exact />
               <Route path="/Carrito" component={Carrito} exact />
-
             </Switch>
-
           </div>
-
         </BrowserRouter>
       </div>
 
