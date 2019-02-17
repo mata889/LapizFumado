@@ -3,23 +3,23 @@
   "name": "Venta de Lapices de Alta Gama",
   "icons": [
     {
-      "src": "./src/logo100x100.png",
+      "src": "https://art.pixilart.com/fa058222ec39280.png",
       "type": "image/png",
       "sizes": "100x100"
     },
     {
-      "src": "./src/logo114x111.png",
+      "src": "https://art.pixilart.com/fa058222ec39280.png",
       "type": "image/png",
       "sizes": "114x111"
     },
     {
-      "src": "./src/logo500x500.png",
+      "src": "https://art.pixilart.com/fa058222ec39280.png",
       "type": "image/png",
       "sizes": "500x500"
     }
   ],
-  "start_url": "index.html?launcher=true",
+  "start_url": "https://art.pixilart.com/fa058222ec39280.png",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "blue",
+  "background_color": "green"
 }

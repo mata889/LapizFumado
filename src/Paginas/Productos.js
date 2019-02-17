@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { ListGroup, Form, FormGroup, Input, Button, Row, Col } from "reactstrap";
-import { Tab, Sonnet } from 'react-bootstrap';
+
 
 class Productos extends Component {
     state = {
