@@ -1,14 +1,18 @@
 {
-  "name": "my-app",
+  "name": "penamazon",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "mdbreact": "^4.10.0",
     "react": "^16.8.2",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.8.2",
+    "react-helmet": "^5.2.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.5",
+    "react-slick": "^0.23.2",
     "reactstrap": "^7.1.0",
+    "slick-carousel": "^1.8.1",
     "surge": "^0.20.1"
   },
   "scripts": {
