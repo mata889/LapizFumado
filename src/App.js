@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
@@ -5,7 +6,7 @@ import Cabeza from "./header";
 import Carrito from "./Paginas/Carrito";
 import Style from "./slick/slick.css"
 import Productos from "./Paginas/Productos";
-
+const $ = window.$;
 
 class App extends Component {
 
@@ -35,7 +36,8 @@ class App extends Component {
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
-        <script type="text/javascrip">
+        <script type="text/javascript">
+        
         $(document).ready(function(){
         $('.your-class').slick(
         )
