@@ -44,9 +44,7 @@ export default class Cabeza extends React.Component {
                             <NavItem>
                                 <NavLink href="/Productos">Productos</NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink href="/Carrito">Carrito</NavLink>
-                            </NavItem>
+                            
 
                             <NavItem>
                                 <NavLink href="https://www.instagram.com/matamorosss/">NuestroCreador</NavLink>
