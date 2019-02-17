@@ -6,9 +6,12 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem
 } from "reactstrap";
-import casa from "./Paginas/Home";
 
 
 export default class Cabeza extends React.Component {
@@ -25,25 +28,26 @@ export default class Cabeza extends React.Component {
             isOpen: !this.state.isOpen
         });
     }
-    home(){
-
-    }
     render() {
         return (
             <div>
                 <Navbar color="primary" light expand="md">
                     <NavbarBrand style={{ color: "white", fontWeight: "bolder", fontSize: "500" }} href="/">
-                        <img alt="Logo" style={{ height: "fill", width: 100 }} src={require("./logo532x518.png")} onClick={this.home}/>
+                        <img alt="Logo" style={{ height: "fill", width: 100 }} src={require("./logo532x518.png")} />
                         PenAmazon</NavbarBrand>
-                        <NavbarToggler onClick={this.toggle} />
+                    <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto " navbar>
+                        <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <NavLink href="/Home">Home</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="/Productos">Productos</NavLink>
                             </NavItem>
+                            <NavItem>
+                                <NavLink href="/Carrito">Carrito</NavLink>
+                            </NavItem>
+
                             <NavItem>
                                 <NavLink href="https://www.instagram.com/matamorosss/">NuestroCreador</NavLink>
                             </NavItem>
