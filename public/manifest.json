@@ -18,7 +18,6 @@
       "sizes": "500x500"
     }
   ],
-  
   "display": "standalone",
   "theme_color": "blue",
   "background_color": "green"
