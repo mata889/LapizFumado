@@ -8,6 +8,8 @@ import {
     NavItem,
     NavLink
 } from "reactstrap";
+import { Button, FormControl, Form } from 'react-bootstrap'
+
 
 
 export default class Cabeza extends React.Component {
@@ -40,8 +42,6 @@ export default class Cabeza extends React.Component {
                             <NavItem>
                                 <NavLink href="/Productos">Productos</NavLink>
                             </NavItem>
-                            
-
                             <NavItem>
                                 <NavLink href="https://www.instagram.com/matamorosss/">NuestroCreador</NavLink>
                             </NavItem>
@@ -49,7 +49,10 @@ export default class Cabeza extends React.Component {
                             <NavItem>
                                 <NavLink href="https://github.com/mata889/LapizFumado">MiGitHub</NavLink>
                             </NavItem>
-
+                            <Form inline>
+                                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                                <Button variant="info">Search</Button>
+                            </Form>
 
                         </Nav>
                     </Collapse>

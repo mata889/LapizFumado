@@ -1,11 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+
 
 
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from "mdbreact";
 
 
-const Home = () =>  {
+class Home extends React.Component {
     
+
+    
+    render() {
+        
         return (
             <div>
                 <MDBContainer>
@@ -24,7 +30,7 @@ const Home = () =>  {
                             </MDBCarouselItem>
                             <MDBCarouselItem itemId="2">
                                 <MDBView>
-                                    <img className="d-block w-" src="http://mocc.pnca.edu/images/uploads/meow-1000x360-new.jpg" alt="Second slide" />
+                                    <img className="d-block w-200" src="http://mocc.pnca.edu/images/uploads/meow-1000x360-new.jpg" alt="Second slide" sizes="100%" />
                                     <MDBMask overlay="black-light" />
                                 </MDBView>
                                 <MDBCarouselCaption>
@@ -39,14 +45,17 @@ const Home = () =>  {
                                 </MDBView>
                                 <MDBCarouselCaption>
                                     <h3 className="h3-responsive">Una Precision Astral</h3>
-                                    <p>Lapices que hasta los mismo dioses estarian Celosos....</p>
+                                    <p>Lapices que hasta los mismo dioses quisieran....</p>
                                 </MDBCarouselCaption>
                             </MDBCarouselItem>
 
                         </MDBCarouselInner>
                     </MDBCarousel>
+
                 </MDBContainer>
+                
             </div>
         )
     }
-    export default Home;
+}
+export default Home;

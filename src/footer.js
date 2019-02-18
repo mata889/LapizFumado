@@ -3,9 +3,9 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 const Pie = () => {
   return (
-    <MDBFooter color="blue " className="font-small darken-3 pt-0 fixed-bottom">
+    <MDBFooter color="blue " className="font-small darken-3 pt-0 mt-5 fixed-bottom">
         <MDBRow>
-          <MDBCol md="12" className="py-.3">
+          <MDBCol md="12" className="py-10">
             <div className="mb-5 flex-center">
               <a className="fb-ic" href="https://www.facebook.com/unitec.honduras/">
                 <i className="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x">

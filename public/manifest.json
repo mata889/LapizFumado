@@ -17,6 +17,11 @@
       "type": "image/png",
       "sizes": "500x500"
     }
+    {
+      "src": "https://art.pixilart.com/fa058222ec39280.png",
+      "type": "image/png",
+      "sizes": "532x518"
+    }
   ],
   "display": "standalone",
   "theme_color": "blue",

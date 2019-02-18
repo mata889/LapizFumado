@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import './App.css';
 import Cabeza from "./header";
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from "mdbreact";
+
 import Productos from "./Paginas/Productos";
 import Pie from "./footer";
 import Home from "./Paginas/Home";
@@ -13,7 +13,7 @@ import Home from "./Paginas/Home";
 class App extends Component {
 
   render() {
-
+    console.log(this.props);
     return (
       <div >
 
@@ -26,6 +26,7 @@ class App extends Component {
                 
               </div>
               <Switch>
+                <Route path="/" component={Home} exact/>
                 <Route path="/Home" component={Home}exact />
                 <Route path="/Productos" component={Productos} exact />
 
