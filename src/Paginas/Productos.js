@@ -144,7 +144,7 @@ class Productos extends Component {
                             </div>
                             <div class="col-sm-6">
                                 <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://lumen.com.mx/Content/Images/productPics/13358003.jpg?v=20181115232114" object-fit="cover" alt="imagen" ></img>
+                                    <img class="card-img-top" height="10%" width="100%" src="https://casaserra.com.mx/wp-content/uploads/2015/12/636638004037-1024x576.jpg" object-fit="cover" alt="imagen" ></img>
                                     <div class="card-body">
                                         <div class="card-title">
                                             <h1>Lapiz Carbon Marca Patito</h1>
@@ -201,7 +201,7 @@ class Productos extends Component {
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://images-na.ssl-images-amazon.com/images/I/613SfYxlbbL._SX355_.jpg" object-fit="cover" alt="imagen" ></img>
+                                    <img class="card-img-top" height="10%" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQikt4EXFqUggmRHI_3YZwFqspwpLg3a0bdzZh2bXMhvFaTPJbKlA" object-fit="cover" alt="imagen" ></img>
                                     <div class="card-body">
                                         <div class="card-title">
                                             <h1>Lapiz Tinta Azul Marca Patito</h1>
@@ -218,7 +218,7 @@ class Productos extends Component {
                             </div>
                             <div class="col-sm-6">
                                 <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://images-na.ssl-images-amazon.com/images/I/71YgNgujFuL._SL1500_.jpg" object-fit="cover" alt="imagen" ></img>
+                                    <img class="card-img-top" height="10%" width="100%" src="https://www.tiendita.cl/wp-content/uploads/2015/01/lapiz-bic-rojo.jpg" object-fit="cover" alt="imagen" ></img>
                                     <div class="card-body">
                                         <div class="card-title">
                                             <h1>Lapiz Tinta Rojo Marca Patito</h1>
@@ -275,7 +275,7 @@ class Productos extends Component {
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://cdn.bmstores.co.uk/images/hpcProductImage/imgFull/301357-Jumbo-Eraser-orange-21.jpg" object-fit="cover" alt="imagen" ></img>
+                                    <img class="card-img-top" height="10%" width="100%" src="https://ae01.alicdn.com/kf/HTB17onSRVXXXXaMXVXXq6xXFXXXb/Jap-n-SEED-Eraser-SUPER-oro-s-per-Goma-de-oro-de-gama-alta-borrador-ER.jpg_640x640.jpg" object-fit="cover" alt="imagen" ></img>
                                     <div class="card-body">
                                         <div class="card-title">
                                             <h1>Borrador</h1>

@@ -30,7 +30,7 @@ class Home extends React.Component {
                             </MDBCarouselItem>
                             <MDBCarouselItem itemId="2">
                                 <MDBView>
-                                    <img className="d-block w-200" src="http://mocc.pnca.edu/images/uploads/meow-1000x360-new.jpg" alt="Second slide" sizes="100%" />
+                                    <img className="d-block w-200" src={require("./meow.jpg")} alt="Second slide" sizes="100%" />
                                     <MDBMask overlay="black-light" />
                                 </MDBView>
                                 <MDBCarouselCaption>
@@ -40,7 +40,7 @@ class Home extends React.Component {
                             </MDBCarouselItem>
                             <MDBCarouselItem itemId="3">
                                 <MDBView>
-                                    <img className="d-block w-200" src="http://error-design.com/malammar/wp-content/uploads/COVER-1000x360.jpg" alt="Third slide" />
+                                    <img className="d-block w-200" src={require("./cover.jpg")} alt="Third slide" />
                                     <MDBMask overlay="black-slight" />
                                 </MDBView>
                                 <MDBCarouselCaption>
@@ -59,7 +59,7 @@ class Home extends React.Component {
                 <MDBRow>
                     <MDBCol>
                         <MDBCard className="card-image" style={{
-                            backgroundImage: "url('http://images.tritondigitalcms.com/6616/sites/115/2018/08/02065517/Essential-Back-to-School-Supplies-Teachers-Should-Have.jpg')"
+                            backgroundImage:("./essential.jpg")
                         }}>
                             <div className="text-white text-center d-flex align-items-center rgba-green-strong py-5 px-4">
                                 <div>
@@ -91,8 +91,8 @@ class Home extends React.Component {
                                     </MDBCardTitle>
                                     <p>
                                        Nuestra Empresa esta inclinida a la Tecnologia y no solo eso, tenemos aliados en todo el mundo.</p>
-                                    <MDBBtn color="deep-orange">
-                                        <MDBIcon icon="clone left" /> Nuestro Aliado Principal</MDBBtn>
+                                    <MDBBtn color="deep-orange" href="http://zimsdesign.surge.sh/">
+                                        <MDBIcon icon="clone left"  /> Nuestro Aliado Principal</MDBBtn>
                                 </div>
                             </div>
                         </MDBCard>

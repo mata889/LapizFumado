@@ -16,11 +16,21 @@
       "src": "https://art.pixilart.com/fa058222ec39280.png",
       "type": "image/png",
       "sizes": "500x500"
-    }
+    },
     {
       "src": "https://art.pixilart.com/fa058222ec39280.png",
       "type": "image/png",
       "sizes": "532x518"
+    },
+    {
+      "src": "https://art.pixilart.com/fa058222ec39280.png",
+      "type": "image/png",
+      "sizes": "194x194"
+    },
+    {
+      "src": "https://art.pixilart.com/fa058222ec39280.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "display": "standalone",
