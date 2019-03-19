@@ -1,0 +1,64 @@
+{
+    "lapices": [
+        {
+            "Title": "Lapiz Mecanico MarkII",
+            "Price": "Lps. 40.50",
+            "Descripcion": "Este lapiz mecanico es conocido por su calidad y precision.",
+            "imagen": "https://sc01.alicdn.com/kf/HTB11mmndBUSMeJjy1zj7630dXXaI/Promotional-High-Quality-Metal-Mechanical-Pencil.png_350x350.png"
+        },
+        {
+            "Title": "Lapiz Carbon Marca Patito",
+            "Price": "Lps. 7.50",
+            "Descripcion": "Lapiz Carbon Reconocido en el mundo como la cuspide de los lapices carbon.",
+            "imagen": "https://casaserra.com.mx/wp-content/uploads/2015/12/636638004037-1024x576.jpg"
+        },
+        {
+            "Title": "Lapiz Tinta Negro Marca Patito",
+            "Price": "Lps. 10.50",
+            "Descripcion": "Clasico Lapiz Tinta Negro, para oficina,trabajos y colegio.",
+            "imagen": "https://www.escribirycorregir.com/wp-content/uploads/2018/10/boligrafos-lp-1.jpg"
+        },
+        {
+            "Title": "Lapiz Tinta Verde Marca Patito",
+            "Price": "Lps. 12.50",
+            "Descripcion": "Lapiz Tinta Verde Perfecto para subrayar.",
+            "imagen": "https://ojoporojo.cl/3739-home_default/bimoji-cambio-fine.jpg"
+        },
+        {
+            "Title": "Lapiz Tinta Azul Marca Patito",
+            "Price": "Lps. 10.50",
+            "Descripcion": "Clasico Lapiz Tinta Azul, para oficina,trabajos y colegio.",
+            "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQikt4EXFqUggmRHI_3YZwFqspwpLg3a0bdzZh2bXMhvFaTPJbKlA"
+        },
+        {
+            "Title": "Lapiz Tinta Rojo Marca Patito",
+            "Price": "Lps. 15.50",
+            "Descripcion": "Clasico Lapiz Tinta Rojo, para oficina,trabajos y colegio.",
+            "imagen": "https://www.tiendita.cl/wp-content/uploads/2015/01/lapiz-bic-rojo.jpg"
+        },
+        {
+            "Title": "Lapiz Mina Marca Patito",
+            "Price": "Lps. 10.50",
+            "Descripcion": "Para los que no les gusta el carbon el lapiz Mina es el que sigue en la lista.",
+            "imagen": "https://www.xeduced.com/wp-content/uploads/2016/03/Pentel-GraphGear.jpg"
+        },
+        {
+            "Title": "HeadLiner Marca Patito 4colores",
+            "Price": "Lps. 25.50",
+            "Descripcion": "Marcador Especificamente para subrayar aquellos datos importantes.",
+            "imagen": "https://ae01.alicdn.com/kf/HTB1RHI5grSYBuNjSspiq6xNzpXaJ/4pcs-Set-Highlighter-Pens-Candy-Colors-Creative-Highlighter-Oblique-Coarse-Colour-Pencil-Graffiti-Marker-Pen-4.jpg_640x640.jpg"
+        },
+        {
+            "Title": "Borrador",
+            "Price": "Lps. 20.50",
+            "Descripcion": "Artefacto Para borrar carbon o mina",
+            "imagen": "https://ae01.alicdn.com/kf/HTB17onSRVXXXXaMXVXXq6xXFXXXb/Jap-n-SEED-Eraser-SUPER-oro-s-per-Goma-de-oro-de-gama-alta-borrador-ER.jpg_640x640.jpg"
+        },
+        {
+            "Title": "Minas 0.7, 0.5",
+            "Price": "Lps. 15.50",
+            "Descripcion": "PackMinas 0.7y0.5",
+            "imagen": "https://ae01.alicdn.com/kf/HTB1OCCfIFXXXXXBapXXq6xXFXXXv/FABER-CASTELL-0-5-0-7-MM-Portaminas-Plomo-HB-2B-L-piz-Mec-nico.jpg_640x640.jpg"
+        }
+    ]
+}

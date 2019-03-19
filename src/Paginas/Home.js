@@ -4,15 +4,34 @@ import React from 'react';
 
 
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer, MDBCard, MDBCardTitle, MDBBtn, MDBRow, MDBCol, MDBIcon } from "mdbreact";
-
-
+var firebase = require("firebase");
+var config = {
+    apiKey: "AIzaSyAjWK7IticvF90SZaHBsUhnixrMNt2714o",
+    authDomain: "pen-900.firebaseapp.com",
+    databaseURL: "https://pen-900.firebaseio.com",
+    projectId: "pen-900",
+    storageBucket: "pen-900.appspot.com",
+};
+firebase.initializeApp(config);
+var db=firebase.database();
 class Home extends React.Component {
-
-
-
+    constructor(props){
+        super(props)
+        this.state={img:""}
+    }
+    componentDidMount(){
+        db.ref().child('pictures/').on('value', (snapshot)=> {
+            let carousel_1 = snapshot.exportVal().carousel_1
+            console.log(carousel_1)
+            this.setState({img:carousel_1})
+        }); 
+    }
+    
     render() {
-
+        
+        
         return (
+            
             <div>
                 <MDBContainer>
                     <h4 className="mt-5 mb-2">Una Compañia Hecha Para Los Inovadores</h4>
@@ -20,7 +39,7 @@ class Home extends React.Component {
                         <MDBCarouselInner>
                             <MDBCarouselItem itemId="1">
                                 <MDBView>
-                                    <img className="d-block w-200" src="https://www.thinknpc.org/wp-content/uploads/2018/08/jay-clark-508185-unsplash-e1535122367277-1000x360.jpg" alt="First slide" />
+                                    <img className="d-block w-200" src={this.state.img} alt="First slide" />
                                     <MDBMask overlay="black-slight" />
                                 </MDBView>
                                 <MDBCarouselCaption>

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^5.9.0",
     "gh-pages": "^2.0.1",
     "mdbootstrap": "^4.7.1",
     "mdbreact": "^4.10.0",

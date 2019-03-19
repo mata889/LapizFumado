@@ -1,17 +1,34 @@
 import React, { Component } from 'react';
-import {Button,Modal} from 'react-bootstrap'
+import {Modal} from 'react-bootstrap'
+import {lapices} from './lapices.json';
+import firebase from 'firebase';
+import '../App.css';
 
+import { Card, CardBody, Button, CardTitle, CardText, CardImg} from 'reactstrap';
 
 
 class Productos extends Component {
     constructor(props, context) {
+        super();
         super(props, context);
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.state = {
             show: false,
             text: '0',
+            lapices,Temp:[]
         };
+
+    }
+    assignItem=precio=>{
+        var temporal=String(precio)
+        var precioVerdad=temporal.substring(5,temporal.length)
+        console.log(precioVerdad);
+        var price=parseFloat(precioVerdad);
+            this.setState({
+                text: parseFloat(this.state.text) + price,
+            });
+        
     }
     handleClose() {
         this.setState({ show: false ,text:0});
@@ -20,72 +37,55 @@ class Productos extends Component {
     handleShow() {
         this.setState({ show: true });
     }
+
    
-    onClickButton1 = () => {
-
-        this.setState({
-            text: parseFloat(this.state.text) + 40.51,
-            
-
-        });
-        console.log(10+9);
-    }
-    onClickButton2 = () => {
-        this.setState({
-            text: parseInt(this.state.text) + 7.50
-        });
-    }
-    onClickButton3 = () => {
-        this.setState({
-            text: parseInt(this.state.text) + 10.50
-        });
-    }
-    onClickButton4 = () => {
-        this.setState({
-            text: parseInt(this.state.text) + 12.50
-        });
-    }
-    onClickButton5 = () => {
-        this.setState({
-            text: parseInt(this.state.text) + 10.50
-        });
-    }
-    onClickButton6 = () => {
-        this.setState({
-            text: parseInt(this.state.text) + 15.50
-        });
-    }
-    onClickButton7 = () => {
-        this.setState({
-            text: parseInt(this.state.text) + 10.50
-        });
-    }
-    onClickButton8 = () => {
-        this.setState({
-            text: parseInt(this.state.text) + 25.51
-        });
-    }
-    onClickButton9 = () => {
-        this.setState({
-            text: parseInt(this.state.text) + 20.50
-        });
-    }
-    onClickButton10 = () => {
-        this.setState({
-            text: parseInt(this.state.text) + 15.50
-        });
-    }
     Borrar = () => {
-
         this.setState({
             text: 0
         });
     }
-
-
-
+    componentWillMount = ()=>{
+        const nameref = firebase.database().ref('lapices')
+        nameref.on('value',(snapshot)=>{
+            var scores=snapshot.val()
+            var keys = Object.keys(scores)
+            var array =[]
+            for(var i=0 ;i<keys.length;i++){
+                var k=keys[i]
+                var a=scores[k].Title
+                var b=scores[k].Price
+                var c=scores[k].Descripcion
+                var d=scores[k].imagen 
+                var arr = {
+                    "Title":a,
+                    "Price":b,
+                    "Descripcion":c,
+                    "imagen":d
+                }
+                array.push(arr)
+                /*console.log(array)*/
+            }
+            this.setState({Temp: array})
+        })
+    }
     render() {
-
+        const lapices =this.state.Temp.map((lapices,i) => {
+            return(
+                <div className="col-md-4">
+                <div className="card mt-4">
+                <Card>
+                    <CardBody>
+                        <CardImg top height="50%" width="50%" src={lapices.imagen}></CardImg>
+                        <CardTitle>{lapices.Title}</CardTitle>
+                        <CardText>{lapices.Descripcion}</CardText>
+                        <CardText>{lapices.Price}</CardText>
+                        <Button color="success" onClick={e=> this.assignItem(lapices.Price)}>Añadir al Carrito</Button>
+                    </CardBody>
+                </Card>
+                </div>
+                </div>
+            )
+        })
         return (
             <div>
                 <div class="align-items-center h-100">
@@ -100,8 +100,6 @@ class Productos extends Component {
                                 <button type="button" class="btn btn-success" onClick={this.handleShow}>
                                     Proseguir con La Compra
                                 </button>
-
-
                                 <Modal show={this.state.show} onHide={this.handleClose}>
                                     <Modal.Header closeButton>
                                         <Modal.Title> Finalizacion De Compra</Modal.Title>
@@ -115,223 +113,24 @@ class Productos extends Component {
                                             Gracias Por Su Compra</Button>
                                     </Modal.Footer>
                                 </Modal>
-
-
-
-
                                 <button type="button" class=" btn btn-danger" onClick={this.Borrar}>
                                     Empezar de Cero
                                 </button>
                             </p>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://sc01.alicdn.com/kf/HTB11mmndBUSMeJjy1zj7630dXXaI/Promotional-High-Quality-Metal-Mechanical-Pencil.png_350x350.png" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>Lapiz Mecanico MarkII</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2 id={this.precio1}>Lps. 40.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            Este lapiz mecanico es conocido por su calidad y precision.
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton1} >Agregar al carrito  </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://casaserra.com.mx/wp-content/uploads/2015/12/636638004037-1024x576.jpg" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>Lapiz Carbon Marca Patito</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2>Lps. 7.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            Lapiz Carbon Reconocido en el mundo como la cuspide de los lapices carbon.
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton2}>Agregar al carrito </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://www.escribirycorregir.com/wp-content/uploads/2018/10/boligrafos-lp-1.jpg" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>Lapiz Tinta Negro Marca Patito</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2>Lps. 10.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            Clasico Lapiz Tinta Negro, para oficina,trabajos y colegio.
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton3}>Agregar al carrito </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://ojoporojo.cl/3739-home_default/bimoji-cambio-fine.jpg" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>Lapiz Tinta Verde Marca Patito</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2>Lps. 12.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            Lapiz Tinta Verde Perfecto para subrayar.
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton4}>Agregar al carrito </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQikt4EXFqUggmRHI_3YZwFqspwpLg3a0bdzZh2bXMhvFaTPJbKlA" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>Lapiz Tinta Azul Marca Patito</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2>Lps. 10.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            Clasico Lapiz Tinta Azul, para oficina,trabajos y colegio.
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton5}>Agregar al carrito </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://www.tiendita.cl/wp-content/uploads/2015/01/lapiz-bic-rojo.jpg" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>Lapiz Tinta Rojo Marca Patito</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2>Lps. 15.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            Clasico Lapiz Tinta Rojo, para oficina,trabajos y colegio.
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton6}>Agregar al carrito </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://www.xeduced.com/wp-content/uploads/2016/03/Pentel-GraphGear.jpg" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>Lapiz Mina Marca Patito</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2>Lps. 10.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            Para los que no les gusta el carbon el lapiz Mina es el que sigue en la lista.
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton7}>Agregar al carrito </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://ae01.alicdn.com/kf/HTB1RHI5grSYBuNjSspiq6xNzpXaJ/4pcs-Set-Highlighter-Pens-Candy-Colors-Creative-Highlighter-Oblique-Coarse-Colour-Pencil-Graffiti-Marker-Pen-4.jpg_640x640.jpg" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>HeadLiner Marca Patito 4colores</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2>Lps. 25.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            Marcador Especificamente para subrayar aquellos datos importantes.
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton8}>Agregar al carrito </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://ae01.alicdn.com/kf/HTB17onSRVXXXXaMXVXXq6xXFXXXb/Jap-n-SEED-Eraser-SUPER-oro-s-per-Goma-de-oro-de-gama-alta-borrador-ER.jpg_640x640.jpg" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1>Borrador</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2>Lps. 20.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            Artefacto Para borrar carbon o mina
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton9}>Agregar al carrito </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="https://ae01.alicdn.com/kf/HTB1OCCfIFXXXXXBapXXq6xXFXXXv/FABER-CASTELL-0-5-0-7-MM-Portaminas-Plomo-HB-2B-L-piz-Mec-nico.jpg_640x640.jpg" object-fit="cover" alt="imagen" ></img>
-                                    <div class="card-body">
-                                        <div class="card-title">
-                                            <h1> Minas 0.7, 0.5</h1>
-                                        </div>
-                                        <div class="card-subtitle">
-                                            <h2>Lps. 15.50</h2>
-                                        </div>
-                                        <div class="card-text">
-                                            PackMinas 0.7y0.5
-                                    </div>
-                                        <button type="button" class="btn-success btn btn-secondary" onClick={this.onClickButton10}>Agregar al carrito </button>
-                                    </div>
-                                </div>
-                            </div>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <div><br></br></div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card mb-4 box shadow">
-                                    <img class="card-img-top" height="10%" width="100%" src="" object-fit="cover" alt="imagen" ></img>
-
-                                </div>
-                            </div>
+                            {lapices}
+                            
                         </div>
                     </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                 </div>
-
-
+                
             </div>
-
         )
-
     }
-
 }
 export default Productos;
