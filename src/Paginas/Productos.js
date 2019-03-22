@@ -97,7 +97,7 @@ class Productos extends Component {
                             </h1>
                             <hr class="my-2"></hr>
                             <p class="lead">
-                                <button type="button" class="btn btn-success" onClick={this.handleShow}>
+                                <button type="buttonProduct" class="btn btn-success" onClick={this.handleShow}>
                                     Proseguir con La Compra
                                 </button>
                                 <Modal show={this.state.show} onHide={this.handleClose}>
@@ -113,7 +113,7 @@ class Productos extends Component {
                                             Gracias Por Su Compra</Button>
                                     </Modal.Footer>
                                 </Modal>
-                                <button type="button" class=" btn btn-danger" onClick={this.Borrar}>
+                                <button type="buttonBorrar" class=" btn btn-danger" onClick={this.Borrar} >
                                     Empezar de Cero
                                 </button>
                             </p>

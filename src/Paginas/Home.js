@@ -4,6 +4,7 @@ import React from 'react';
 
 
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer, MDBCard, MDBCardTitle, MDBBtn, MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import { Container } from 'react-bootstrap';
 var firebase = require("firebase");
 var config = {
     apiKey: "AIzaSyAjWK7IticvF90SZaHBsUhnixrMNt2714o",
@@ -32,7 +33,7 @@ class Home extends React.Component {
         
         return (
             
-            <div>
+            <Container>
                 <MDBContainer>
                     <h4 className="mt-5 mb-2">Una Compañia Hecha Para Los Inovadores</h4>
                     <MDBCarousel activeItem={1} length={3} showControls={true} showIndicators={true} className="z-depth-1">
@@ -70,9 +71,7 @@ class Home extends React.Component {
 
                         </MDBCarouselInner>
                     </MDBCarousel>
-                    <br>
-                    </br>
-                    <br></br>
+                    
                 </MDBContainer>
 
                 <MDBRow>
@@ -124,7 +123,7 @@ class Home extends React.Component {
                 <br></br>
                 <br></br>
 
-            </div>
+            </Container>
         )
     }
 }

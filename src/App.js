@@ -8,7 +8,7 @@ import Cabeza from "./header";
 import Productos from "./Paginas/Productos";
 import Pie from "./footer";
 import Home from "./Paginas/Home";
-
+import Login from "./Paginas/Login";
 
 class App extends Component {
 
@@ -29,7 +29,7 @@ class App extends Component {
                 <Route path="/" component={Home} exact/>
                 <Route path="/Home" component={Home}exact />
                 <Route path="/Productos" component={Productos} exact />
-
+                <Route path="/Login" component={Login}exact/>
               </Switch>
               
             </div>

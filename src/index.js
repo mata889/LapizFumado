@@ -17,8 +17,8 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 serviceWorker.register();
 
- if (window.location.protocol !== "https:") {
+ /*if (window.location.protocol !== "https:") {
      window.location =
        "https://" + window.location.hostname + window.location.pathname + window.location.hash;
- }
+ }*/
  

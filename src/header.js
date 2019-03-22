@@ -76,11 +76,11 @@ export default class Cabeza extends React.Component {
                                     <NavLink href="/Productos">Productos</NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="https://www.instagram.com/matamorosss/">NuestroCreador</NavLink>
+                                    <NavLink href="https://www.instagram.com/matamorosss/" alt="insta">NuestroCreador</NavLink>
                                 </NavItem>
 
                                 <NavItem>
-                                    <NavLink href="https://github.com/mata889/LapizFumado">MiGitHub</NavLink>
+                                    <NavLink href="https://github.com/mata889/LapizFumado" alt="github de la pagina">MiGitHub</NavLink>
                                 </NavItem>
                                 <form class="form-inline" action="/action_page.php" onSubmit={this.handleSubmit}>
                                     <input class="form-control mr-sm-2" name="search" type="text" placeholder="Search" onChange={this.handleChange} />
@@ -88,14 +88,14 @@ export default class Cabeza extends React.Component {
                                         <a class="nav-link"  href={this.state.search} className="buttn2">Search</a>
                                     </li>
                                 </form>
-
+                                <NavItem>
+                                    <NavLink href="/Login" alt="Login para miembros premium">Login</NavLink>
+                                </NavItem>
                             </Nav>
                         </Collapse>
                     </Container>
                 </Navbar>
                 <Switch>
-                    <Route path="https://www.instagram.com/matamorosss/"/>
-                    <Route path="https://github.com/mata889/LapizFumado"/>
                     <Route path="/search/:ser" render={
                         ({match})=> {
                             const Temp = this.state.Temp.map((todos, i) => {
@@ -113,8 +113,7 @@ export default class Cabeza extends React.Component {
                                                             </CardBody>
                                                         </Card>
                                                     </div>
-                                                </div>
-                                                : ""
+                                                </div>:""
                                 )
                             })
                             return (
